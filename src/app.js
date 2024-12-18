@@ -6,7 +6,7 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  //write your code here
+  //Variables to create the excuse
   let who = ["The dog", "My grandma", "The mailman", "My bird"];
   let action = [" ate", " peed", " crushed", " broke"];
   let what = [" my homework", " my phone", " the car"];
@@ -17,11 +17,13 @@ window.onload = function() {
     " during my lunch",
     " while I was praying"
   ];
-  let po1 = Math.floor(Math.random() * who.length);
-  let po2 = Math.floor(Math.random() * action.length);
-  let po3 = Math.floor(Math.random() * what.length);
-  let po4 = Math.floor(Math.random() * when.length);
+
+  //Structure of the sentence
+  let position1 = Math.floor(Math.random() * who.length);
+  let position2 = Math.floor(Math.random() * action.length);
+  let position3 = Math.floor(Math.random() * what.length);
+  let position4 = Math.floor(Math.random() * when.length);
 
   document.querySelector("#excuse").innerHTML =
-    who[po1] + action[po2] + what[po3] + when[po4];
+    who[position1] + action[position2] + what[position3] + when[position4];
 };
